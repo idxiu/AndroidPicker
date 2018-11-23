@@ -1,0 +1,9 @@
+基于[XDroid-Base](https://github.com/fodroid/XDroid-Base)的log模块重构
+```text
+类似的开源实现有：
+https://github.com/elvishew/xLog
+https://github.com/orhanobut/logger
+https://github.com/ZhaoKaiQiang/KLog
+https://github.com/fengzhizi715/SAF-Kotlin-log
+https://github.com/EsotericSoftware/minlog
+```

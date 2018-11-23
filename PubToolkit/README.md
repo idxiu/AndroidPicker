@@ -1,0 +1,1 @@
+常用的辅助工具类，更多方法参见开源项目[AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)

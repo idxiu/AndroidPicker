@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "FilePicker"
+    pomDescription = "文件选择器"
+}
+
+dependencies {
+    compile project(':PubCommon')
+}

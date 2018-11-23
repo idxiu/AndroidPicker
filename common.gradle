@@ -1,0 +1,58 @@
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOL_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        ndk {
+            //支持的CPU架构，如armeabi、x86、mips等
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false //混淆后可能有很多潜在问题，建议使用第三方加固服务
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles project.getParent().file('proguard-rules.pro')
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled false
+        useNewCruncher false
+    }
+
+    lintOptions {
+        //所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题是否将停止构建
+        checkReleaseBuilds false
+        //错误发生后是否停止构建
+        abortOnError false
+    }
+
+    packagingOptions {
+        //升级ndk到17.0.4754217编译so失败问题
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+        //不把架构组件包及V4支持包相关的version文件打包进行apk
+        exclude '*/META-INF/proguard/*'
+        exclude '*/META-INF/*.version'
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:support-v4:${ANDROID_SUPPORT_VERSION}"
+}

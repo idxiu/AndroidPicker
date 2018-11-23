@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MarkCheckBox">
+        <attr name="mcb_textColor" format="color|reference" />
+        <attr name="mcb_markText" format="string|reference" />
+        <attr name="mcb_markTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

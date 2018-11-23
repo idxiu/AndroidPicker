@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "Logger"
+    pomDescription = "调试日志打印工具类"
+}
+
+android {
+
+}
+
+dependencies {
+    implementation "com.android.support:support-v4:${ANDROID_SUPPORT_VERSION}"
+}

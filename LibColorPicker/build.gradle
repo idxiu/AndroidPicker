@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "ColorPicker"
+    pomDescription = "颜色选择器"
+}
+
+dependencies {
+    implementation project(':PubToolkit')
+    implementation project(':PubCommon')
+}

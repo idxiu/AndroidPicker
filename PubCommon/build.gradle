@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "Common"
+    pomDescription = "公用类：JavaBean、弹窗、下拉菜单、底部弹出式菜单……"
+}
+
+dependencies {
+    implementation "com.android.support:support-v4:${ANDROID_SUPPORT_VERSION}"
+    implementation project(':PubLogger')
+    implementation project(':PubToolkit')
+    implementation "android.arch.lifecycle:runtime:1.1.1"
+}
+
+

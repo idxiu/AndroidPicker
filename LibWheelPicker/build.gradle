@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "WheelPicker"
+    pomDescription = "滑轮选择器, 包括日期选择器、时间选择器、单项选择器、地址选择器等等"
+}
+
+dependencies {
+    implementation project(':PubLogger')
+    implementation project(':PubCommon')
+    implementation project(':PubToolkit')
+}

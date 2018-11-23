@@ -1,0 +1,13 @@
+公用模块，如弹出层基类
+```text
+弹出层自动感知Activity/Fragment的生命周期，执行过程如下：
+newPopup
+setXXX
+onPrepareShow
+apply
+createContentView
+onViewCreated
+show
+dismiss
+onDismiss
+```

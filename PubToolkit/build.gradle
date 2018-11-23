@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+
+ext {
+    isLibrary = true
+    pomArtifactId = "Toolkit"
+    pomDescription = "辅助工具类"
+}
+
+dependencies {
+    implementation "com.android.support:support-v4:${ANDROID_SUPPORT_VERSION}"
+    implementation project(':PubLogger')
+    api 'com.blankj:utilcode:1.21.2'
+}
+
+
